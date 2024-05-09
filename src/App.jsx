@@ -18,6 +18,8 @@ function App() {
 
   let g = function () {}; // function
   console.log("g", typeof g);
+  // 스크립트는 값의 타입을 미리 지정하는게 아닌
+  // 들어가는 값에 따라 변수의 타입이 바뀐다.
 
   return <div></div>;
 }
