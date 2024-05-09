@@ -11,7 +11,7 @@ function App(props) {
   return (
     <div>
       <ul>
-        <li>age : {obj.name}</li>
+        <li>age : {obj.age}</li>
         <li>name : {obj.name}</li>
         <li>email : {obj.email}</li>
         <li>pw ass: {obj.password}</li>
