@@ -13,6 +13,9 @@ function App(props) {
     console.log("anonymous action");
   };
 
+  // arrow function
+  const action3 = () => console.log("anonymous action $$$$");
+
   return (
     <div>
       <button onClick={action1}>클릭!</button>
@@ -24,6 +27,8 @@ function App(props) {
       >
         클릭#
       </button>
+      <button onClick={action3}>클릭$</button>
+      <button onClick={() => console.log("arrow function %%%%%")}>클릭%</button>
     </div>
   );
 }
