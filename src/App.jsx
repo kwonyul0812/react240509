@@ -12,6 +12,8 @@ function MyContainer({ message }) {
   return <MySection message={message} />;
 }
 
+// context
+// https://react.dev/learn/passing-data-deeply-with-context
 function App(props) {
   const [message, setMessage] = useState("");
 
