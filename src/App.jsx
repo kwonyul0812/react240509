@@ -4,6 +4,8 @@ import axios from "axios";
 function App(props) {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
+  const [age, setAge] = useState(0);
+  const [nickName, setNickName] = useState("");
 
   function handleClick1() {
     const obj1 = { name: "son", age: 44 };
@@ -31,6 +33,10 @@ function App(props) {
     axios.post("/api/main41/sub3", { name, city });
   }
 
+  function handleClick4() {
+    axios.post("/api/main41/sub4", { age, nickName });
+  }
+
   return (
     <div>
       <button onClick={handleClick1}>요청(json 데이터 포함)</button>
@@ -42,6 +48,13 @@ function App(props) {
         <input type="text" onChange={(e) => setCity(e.target.value)} />
         <br />
         <button onClick={handleClick3}>요청 (input에 입력한 값)</button>
+      </div>
+      <div>
+        <input type="text" onChange={(e) => setAge(e.target.value)} />
+        <br />
+        <input type="text" onChange={(e) => setNickName(e.target.value)} />
+        <br />
+        <button onClick={handleClick4}>요청</button>
       </div>
     </div>
   );
