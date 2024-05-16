@@ -48,6 +48,10 @@ function App(props) {
         } else if (err.response.status === 403) {
           console.log("403에러 발생");
         }
+      })
+      .finally(() => {
+        // finally : 응답 코드가 200이든 아니든 항상 실행됨
+        console.log("항상 시행되는 메소드");
       });
   }
 
