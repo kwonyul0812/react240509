@@ -1,10 +1,10 @@
 import React from "react";
-import {createBrowserRouter} from "react-router-dom";
-import {BoardAdd} from "./BoardAdd.jsx";
-import {BoardEdit} from "./BoardEdit.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BoardAdd } from "./BoardAdd.jsx";
+import { BoardEdit } from "./BoardEdit.jsx";
 
 function BoardList() {
-  return <div>게시물 목록 페이지</div>
+  return <div>게시물 목록 페이지</div>;
 }
 
 // router 객체
@@ -18,8 +18,12 @@ const router = createBrowserRouter([
     element: <BoardEdit />,
   },
   {
-    path: "/list",
-    element: <BoardList>,
+    path: "/board/write",
+    element: <div>게시물 작성하기!!</div>,
+  },
+  {
+    path: "/board/edit",
+    element: <div>게시물 수정하기@@@</div>,
   },
 ]);
 
