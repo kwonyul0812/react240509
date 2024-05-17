@@ -4,7 +4,7 @@ import {
   Link,
   Outlet,
   RouterProvider,
-  useSearchParams,
+  useParams,
 } from "react-router-dom";
 
 function Root() {
@@ -26,21 +26,21 @@ function BoardList() {
   return (
     <div>
       <div>
-        <Link to="/board?id=1">1번 게시물 보기</Link>
+        <Link to="/board/1">1번 게시물 보기</Link>
       </div>
       <div>
-        <Link to="/board?id=2">2번 게시물 보기</Link>
+        <Link to="/board/2">2번 게시물 보기</Link>
       </div>
       <div>
-        <Link to="/board?id=3">3번 게시물 보기</Link>
+        <Link to="/board/3">3번 게시물 보기</Link>
       </div>
     </div>
   );
 }
 
 function BoardView() {
-  const [params] = useSearchParams();
-  return <div>{params.get("id")}번 게시물 보는중</div>;
+  const params = useParams();
+  return <div>{params.id}번 게시물 보는중</div>;
 }
 
 const router = createBrowserRouter([
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         element: <BoardList />,
       },
       {
-        path: "board",
+        path: "board/:id",
         element: <BoardView />,
       },
     ],
