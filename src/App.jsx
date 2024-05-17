@@ -4,6 +4,7 @@ import {
   Link,
   Outlet,
   RouterProvider,
+  useNavigate,
   useParams,
 } from "react-router-dom";
 
@@ -23,16 +24,17 @@ function Root() {
 }
 
 function BoardList() {
+  const navigate = useNavigate();
   return (
     <div>
-      <div>
-        <Link to="/board/1">1번 게시물 보기</Link>
+      <div style={{ cursor: "pointer" }} onClick={() => navigate("/board/1")}>
+        1번 게시물 보기
       </div>
-      <div>
-        <Link to="/board/2">2번 게시물 보기</Link>
+      <div style={{ cursor: "pointer" }} onClick={() => navigate("/board/2")}>
+        2번 게시물 보기
       </div>
-      <div>
-        <Link to="/board/3">3번 게시물 보기</Link>
+      <div style={{ cursor: "pointer" }} onClick={() => navigate("/board/3")}>
+        3번 게시물 보기
       </div>
     </div>
   );
