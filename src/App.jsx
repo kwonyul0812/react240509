@@ -23,6 +23,9 @@ function SpringBoot() {
         }}
       >
         <div>
+          <Link to={"/react"}>HOME</Link>
+        </div>
+        <div>
           <Link to="/react/doc">DOC</Link>
         </div>
         <div>
@@ -45,6 +48,7 @@ const router = createBrowserRouter([
     path: "/react",
     element: <SpringBoot />,
     children: [
+      { index: true, element: <div>react HOME</div> },
       { path: "doc", element: <div>react doc</div> },
       { path: "tutorial", element: <div>react tutorial</div> },
       { path: "sample", element: <div>react sample</div> },
