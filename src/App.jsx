@@ -10,7 +10,7 @@ function App(props) {
           bgColor: "yellow",
         }}
       >
-        Lorem ipsum dolor.
+        Lorem ipsum. dolor.
       </Box>
     </ChakraProvider>
   );
